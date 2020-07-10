@@ -1,2 +1,19 @@
 # KMeans
-PluMA plugin to perform K-Means clustering (MacQueen, 1967)
+# Language: R
+# Input: CSV
+# Output: CSV
+# Tested with: PluMA 1.1, R 4.0.0
+# Dependencies: cluster_2.1.0, factorextra_1.0.7
+
+PluMA plugin to perform KMeans clustering (MacQueen, 1967).
+
+The plugin takes as input a table of input data in column-separated value (CSV) format,
+with samples as rows and measurements as columns.  Samples are then clustered based on values
+of all measurements. 
+
+Typically KMeans requires a number of clusters to be specified in advance; however this 
+plugin first uses an internal Silhouette plot to determine an optimal number of clusters,
+and uses that when running KMeans.
+
+The output CSV file will contain samples as rows and two columns, the first with the name
+of the sample (same as the input CSV), and the second with the cluster number.
