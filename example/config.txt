@@ -1,0 +1,2 @@
+Prefix plugins/KMeans/example
+Plugin KMeans inputfile USArrests.csv outputfile USArrests.clusters.csv
